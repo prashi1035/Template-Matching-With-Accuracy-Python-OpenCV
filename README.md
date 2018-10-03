@@ -8,6 +8,16 @@ To run this project run template_match_accuracy.py file.
 
 python template_match_accuracy.py path_to_image_file path_to_template_image
 
+Example:
+python template_match_accuracy.py org_pic.png tem_pic.png
+
+Input:
+org_pic.png 
+tem_pic.png
+
+Output:
+output.jpg
+
 # Prerequisites
 Python 3.6
 opencv_python==3.4.2.17

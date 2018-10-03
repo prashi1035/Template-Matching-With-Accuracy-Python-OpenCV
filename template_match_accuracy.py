@@ -15,11 +15,9 @@ class template_matching_cls:
     def template_matching(self):
         ''' Finding the templates in the original image'''
         
-        self.org_img = org_img
-        self.tmp_img = tmp_img
-        img_rgb_org = cv2.imread(org_img)
+        img_rgb_org = cv2.imread(self.org_img)
         img_gray = cv2.cvtColor(img_rgb_org, cv2.COLOR_BGR2GRAY)
-        template = cv2.imread(tmp_img,0)
+        template = cv2.imread(self.tmp_img,0)
         w, h = template.shape[::-1]
         res = cv2.matchTemplate(img_gray,template,cv2.TM_CCOEFF_NORMED)
         threshold = 0.5
